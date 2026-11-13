@@ -1,0 +1,578 @@
+{
+ "gemma-4-26b-a4b/gemma-4-26b-a4b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 9584184,
+  "episodes": 4041,
+  "sha256": "8f07cdac607cb8a27369794eb8e5577136756515eb80f64a52cb15b88c606ad0"
+ },
+ "gemma-4-26b-a4b/gemma-4-26b-a4b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3067135,
+  "episodes": 400,
+  "sha256": "af1c2ee862b6f9ecda441b3941f36fbe0a11cc7404c92252ae68e8b9d1e59983"
+ },
+ "gemma-4-26b-a4b/gemma-4-26b-a4b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 14651068,
+  "episodes": 5388,
+  "sha256": "9e3b133d0dab5171beb1987ff33e2fb7eac84a551c7c26d11b996e4678f56572"
+ },
+ "gemma-4-e2b/gemma-4-e2b-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 17240069,
+  "episodes": 6735,
+  "sha256": "aa752e51eb394b1a58b3354395148a487280966cbddc89bafe4c42a0a74d4865"
+ },
+ "gemma-4-e2b/gemma-4-e2b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3151148,
+  "episodes": 400,
+  "sha256": "66b204fed24d694e7405aef8f51bf25037757228922866dd02bbe7f15a2ace3e"
+ },
+ "gemma-4-e2b/gemma-4-e2b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 11499341,
+  "episodes": 1547,
+  "sha256": "98acb2df962928a48ae8d17ddc7ed871386c495a913be030341979b0ed932a47"
+ },
+ "gemma-4-e4b/gemma-4-e4b-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 18122032,
+  "episodes": 6735,
+  "sha256": "81419181b90421108eab0a6b65b959a16011ae6738bae35fb88e4eb47d68bc0e"
+ },
+ "gemma-4-e4b/gemma-4-e4b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3720312,
+  "episodes": 400,
+  "sha256": "548f81ba33305c7c7cc404954a2c874489d20a6d9dcea07a7f9c336728c4f294"
+ },
+ "gemma-4-e4b/gemma-4-e4b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 11650602,
+  "episodes": 1547,
+  "sha256": "ebd9dba7c54b7abf870cfeaba83c1d36c06d3fb7439f20822bdb189610b9c34e"
+ },
+ "granite-4.0-micro/granite-4.0-micro-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 10460061,
+  "episodes": 5388,
+  "sha256": "8f9ab83af2aa6d476922e56df937df8121caecf7262b35c1e94c4e992f6266fd"
+ },
+ "granite-4.0-micro/granite-4.0-micro-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 2515211,
+  "episodes": 1347,
+  "sha256": "e1c354607b8345955bd47abdbdc77e6c9ffff2bddd4eb66c732bc17c507d630e"
+ },
+ "granite-4.0-micro/granite-4.0-micro-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2318345,
+  "episodes": 400,
+  "sha256": "6e5a7f863c54c3cf6fc6e096daf3eee29456f2b5a83855b14d1a6f758caa1860"
+ },
+ "granite-4.0-micro/granite-4.0-micro.jsonl": {
+  "stage": "stage 1",
+  "bytes": 10961396,
+  "episodes": 5388,
+  "sha256": "0f33e654edb6c1c2ceed913bb7d2b250065b71cb32d965d85885c9d5450a9ee2"
+ },
+ "lfm2.5-1.2b/lfm2.5-1.2b-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 15091013,
+  "episodes": 6735,
+  "sha256": "c7f7f401c5c13815c5977568dbb218d2aff7125f7fcc7cc668f42f235eaf1baf"
+ },
+ "lfm2.5-1.2b/lfm2.5-1.2b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2534481,
+  "episodes": 400,
+  "sha256": "25764fa1694aaf958b5f9753d02b9ad9874016ed3c7604c62baf574816063ebb"
+ },
+ "lfm2.5-1.2b/lfm2.5-1.2b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 35663447,
+  "episodes": 4641,
+  "sha256": "5bc9aecbb7c494c53818241020a6496f2063688d7cb74fc3fa6ffdc2b7948d1c"
+ },
+ "lfm2.5-1.2b/lfm2.5-1.2b-pdg.jsonl": {
+  "stage": "stage 3 \u00b7 planner Gemma-4-26B",
+  "bytes": 11043229,
+  "episodes": 1547,
+  "sha256": "18336fe0764491303bf301c0ac99ccd255f946c266db0b0f5a068ef2de4609d6"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 22917436,
+  "episodes": 6735,
+  "sha256": "51e9a6bc987cfd2bb39897a389773b8d7c4e67a58cd3897f15c57717c55dfe2c"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-cp4.jsonl": {
+  "stage": "stage 4 \u00b7 planner Qwen3.5-4B",
+  "bytes": 12776388,
+  "episodes": 650,
+  "sha256": "bbb65f08d5c2c1ee0812b09c2f49cc1d4d55196423cca63bd0d68b14e8522e9d"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-cp9.jsonl": {
+  "stage": "stage 4 \u00b7 planner Qwen3.5-9B",
+  "bytes": 12786215,
+  "episodes": 650,
+  "sha256": "835002745d2613baba469e9a1114c3ff578397c5fdb36b112c7be120770d075a"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-cpl.jsonl": {
+  "stage": "stage 4 \u00b7 planner LFM2.5-2.6B",
+  "bytes": 6060042,
+  "episodes": 650,
+  "sha256": "b1c65fa358c23839b0dfd97d49fd19ba2f13d198734d17e4211d7343df983f6f"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-cpsolo.jsonl": {
+  "stage": "stage 4 solo",
+  "bytes": 4013682,
+  "episodes": 400,
+  "sha256": "ccd369a4b81677aee722395ea6e4f11a6c14407bfabe67279295bfd8bbf93f78"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3535420,
+  "episodes": 400,
+  "sha256": "532b06b3e24b746ca17eae71cd1d749fffc5795aa8df8f6d2787dc4067d831ea"
+ },
+ "lfm2.5-2.6b/lfm2.5-2.6b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 12400693,
+  "episodes": 1547,
+  "sha256": "634ed30efb15439882c24b9822a92b0106838f7a4a5c2949067cb5fdd6631b06"
+ },
+ "lfm2.5-230m/lfm2.5-230m-L-v4.jsonl": {
+  "stage": "phase L, parser v4 (set aside)",
+  "bytes": 15106011,
+  "episodes": 6735,
+  "sha256": "86cc580190223ea387722bff939153f76db1199ee2c6a3f96e0ff98e95880108"
+ },
+ "lfm2.5-230m/lfm2.5-230m-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 14935012,
+  "episodes": 6735,
+  "sha256": "620ba74c245fe1e4318186e6f801d7eb0c251649abaec9d300c29fd3a3a81979"
+ },
+ "lfm2.5-230m/lfm2.5-230m-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2684664,
+  "episodes": 400,
+  "sha256": "a7d63b2009a7d0754322e147973aea1e834a3c4302507876d2ecf74d83fa3060"
+ },
+ "lfm2.5-350m/lfm2.5-350m-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 14382216,
+  "episodes": 6735,
+  "sha256": "ab282aac0ad8545fd9f05d6b472eade1bb58ef2f253f41c7dcac2de686521eac"
+ },
+ "lfm2.5-350m/lfm2.5-350m-cp4.jsonl": {
+  "stage": "stage 4 \u00b7 planner Qwen3.5-4B",
+  "bytes": 12384859,
+  "episodes": 650,
+  "sha256": "bf4b428e084a491b64b904f2aab6a96dc5983c04c9ab8697452f8f1d3060d704"
+ },
+ "lfm2.5-350m/lfm2.5-350m-cp9.jsonl": {
+  "stage": "stage 4 \u00b7 planner Qwen3.5-9B",
+  "bytes": 13351788,
+  "episodes": 650,
+  "sha256": "a99ad64cb8968b6e52ba30670d25c4586e6773b190aa8f3a9df4992f045020f2"
+ },
+ "lfm2.5-350m/lfm2.5-350m-cpl.jsonl": {
+  "stage": "stage 4 \u00b7 planner LFM2.5-2.6B",
+  "bytes": 5649387,
+  "episodes": 650,
+  "sha256": "ade4ca75deb4a466760bc18f533e99845e39e2943664491e2a222ef16d2b7257"
+ },
+ "lfm2.5-350m/lfm2.5-350m-cpsolo.jsonl": {
+  "stage": "stage 4 solo",
+  "bytes": 2722341,
+  "episodes": 400,
+  "sha256": "cd6d2743142e40029311d9ef115af396f9a57f36ae29f56aacf4082e5673aff8"
+ },
+ "lfm2.5-350m/lfm2.5-350m-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2068009,
+  "episodes": 400,
+  "sha256": "08d7ab49be463d51253397b8807c468a42f2f606acf1256a1dcf8141043c6d44"
+ },
+ "lfm2.5-350m/lfm2.5-350m-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 14468310,
+  "episodes": 1547,
+  "sha256": "f461aace3808a7f428dfffd42b5cfe01db104507aef11a075050f3a218a12491"
+ },
+ "lfm2.5-8b-a1b/lfm2.5-8b-a1b-L.jsonl": {
+  "stage": "phase L",
+  "bytes": 17637188,
+  "episodes": 6735,
+  "sha256": "dced38bc9b89fbaff2f371c1821cad66bb270a86f9666113844446f808d8b349"
+ },
+ "lfm2.5-8b-a1b/lfm2.5-8b-a1b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2907169,
+  "episodes": 400,
+  "sha256": "25cecdefa64a0aa2710468266f5285940cee76f6aea7fb92a17a28db90821558"
+ },
+ "lfm2.5-8b-a1b/lfm2.5-8b-a1b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 12253662,
+  "episodes": 1547,
+  "sha256": "0b2ac82ead0f6d82c597cc1c98fc284cf0810adeb6e934048cd805ca64371c5b"
+ },
+ "mnn-pocket-0.3b/mnn-pocket-0.3b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 20325689,
+  "episodes": 5388,
+  "sha256": "31775fa2699f0b45ac3832fb0f8416184f4313933ed969e2a1b7d9b4caab72b6"
+ },
+ "mnn-pocket-0.3b/mnn-pocket-0.3b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 4473851,
+  "episodes": 1347,
+  "sha256": "6bd203496406020dc52ba6d5f387bac0b77f5af5100db6877359fadeb9034e0a"
+ },
+ "mnn-pocket-0.3b/mnn-pocket-0.3b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2567295,
+  "episodes": 400,
+  "sha256": "d903e893dfd38c29cb876a43e5dc21c75b3a600890f601e4c16ed62bed7134d0"
+ },
+ "mnn-pocket-0.3b/mnn-pocket-0.3b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 18375196,
+  "episodes": 5388,
+  "sha256": "27293794b04487037e749786374bd8348662219001619098e5fead394627f297"
+ },
+ "parser/v1/gemma-4-26b-a4b.jsonl": {
+  "stage": "parser v1 (set aside)",
+  "bytes": 425015,
+  "episodes": 259,
+  "sha256": "7c5a2d300c918889b55ee07bcc02fd94f0a0ab1e2ffd9d8e51abd6784bf62ac6"
+ },
+ "parser/v2/gemma-4-26b-a4b.jsonl": {
+  "stage": "parser v2 (set aside)",
+  "bytes": 1817385,
+  "episodes": 684,
+  "sha256": "8c2483aaca60ab93be94bf4c5fa6636c6458ed37dd4624d633188eed4c9f94c4"
+ },
+ "parser/v3/gemma-4-26b-a4b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 11326002,
+  "episodes": 4206,
+  "sha256": "0dd94f2c7e06ad9d980885330c9fbeeba8d95aeccd9be6bd628356f819e486ca"
+ },
+ "parser/v3/granite-4.0-micro.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 10665584,
+  "episodes": 5388,
+  "sha256": "d9bc3de69ef91585a5f1fcfb578ae9fa0b720554892c2f86f807a3d53b733447"
+ },
+ "parser/v3/mnn-pocket-0.3b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 3557418,
+  "episodes": 1142,
+  "sha256": "c04d062b23b4d5a7d8bc82c27f77320b60e990ac4a65431e8270e8fc9794ef87"
+ },
+ "parser/v3/qwen3-0.6b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 3640881,
+  "episodes": 1679,
+  "sha256": "b5767017aeec6dd53e10cca2978e4e81e49252f6350993bfd4300d7e147a1f89"
+ },
+ "parser/v3/qwen3-vl-30b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 10636328,
+  "episodes": 3614,
+  "sha256": "5097ab80f8a1553d1104ac0a833511542ca8792a83cdfbe1e16227de69b36632"
+ },
+ "parser/v3/qwen3-vl-8b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 1968694,
+  "episodes": 796,
+  "sha256": "3db7d77abf43daebb79d90202a80837b307049887d9ce98b56ad359aacc03253"
+ },
+ "parser/v3/qwen3.5-0.8b-wsp.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 3229069,
+  "episodes": 775,
+  "sha256": "f0d46bf30e4417f758b1cb8d060a0bb41ed1ac50579c77a09f2329fc658dd04d"
+ },
+ "parser/v3/qwen3.5-0.8b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 4954792,
+  "episodes": 1112,
+  "sha256": "2e4bd9eddbce9b8041784e4e34cd99df52de751f1e22b9c490d9f568cfa0486c"
+ },
+ "parser/v3/qwen3.5-2b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 5788597,
+  "episodes": 1536,
+  "sha256": "a5126724c49d68435a67bf607ad7e5aa59395773e52b3c41db893a7630e5f6e4"
+ },
+ "parser/v3/qwen3.5-4b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 1255614,
+  "episodes": 459,
+  "sha256": "7d8b61f92272f3a5171f9c52c2018742d37235daff0d90bd1764e59c6c9fb276"
+ },
+ "parser/v3/qwen3.5-9b.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 3115571,
+  "episodes": 1171,
+  "sha256": "0910c2c2e2bbfa20c70598e14567f2f6bdaebc55866a503d68cae224c44820eb"
+ },
+ "parser/v3/qwen3.8.jsonl": {
+  "stage": "parser v3 (set aside)",
+  "bytes": 3162419,
+  "episodes": 1026,
+  "sha256": "c7636a75261029f4d8e7714bd2c76e7005a31139b4c1907601620cba8f3bbff1"
+ },
+ "qwen3-0.6b/qwen3-0.6b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 12235537,
+  "episodes": 5388,
+  "sha256": "f1178fa7e310043d877b26a950bd68768a64602db7b53aa4ea82f85a62984207"
+ },
+ "qwen3-0.6b/qwen3-0.6b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 3174234,
+  "episodes": 1347,
+  "sha256": "bd32e7f23e8d4c4461baf93eb7b38f3668fd637b85e4a9422c33aeb9d9d6e605"
+ },
+ "qwen3-0.6b/qwen3-0.6b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 2661077,
+  "episodes": 400,
+  "sha256": "5e951c4ab8cfe43ed281a91dd09ca433dd8a5dc25e967e33ac813ae535e9647a"
+ },
+ "qwen3-0.6b/qwen3-0.6b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 11331792,
+  "episodes": 5388,
+  "sha256": "8be249461e67e47873db8e65c4d5ef2879af7b0a1f26853d6b297ee505a03394"
+ },
+ "qwen3-vl-30b/qwen3-vl-30b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 11740953,
+  "episodes": 4041,
+  "sha256": "dc56250cea3f86da116e95c61a4c5d6dabe12fd4b717f4e3b786b8592401da73"
+ },
+ "qwen3-vl-30b/qwen3-vl-30b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 4009590,
+  "episodes": 400,
+  "sha256": "7bf14b4ebbef8cf9016bac36678b13ca26e27e2649d75ed0d3409697d6b7b5ca"
+ },
+ "qwen3-vl-30b/qwen3-vl-30b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 16219941,
+  "episodes": 5388,
+  "sha256": "1490d978b014321a59febff63c648940f0bf568cae039c7225bebd5394fd11f0"
+ },
+ "qwen3-vl-8b/qwen3-vl-8b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 13963022,
+  "episodes": 5388,
+  "sha256": "f5c4c60941b2b0ece6e5ddca4b19886797817848985d9cfb150110e864a80beb"
+ },
+ "qwen3-vl-8b/qwen3-vl-8b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 3833255,
+  "episodes": 1347,
+  "sha256": "22817e54964466768e9f90d923e63d8cf0dee2c9f24c619d82cb4dc39b92ce7e"
+ },
+ "qwen3-vl-8b/qwen3-vl-8b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3554531,
+  "episodes": 400,
+  "sha256": "e1c3a5e31ccd5b2aec1279940a27ac10be242502c062550a18541b5dc69f5d1f"
+ },
+ "qwen3-vl-8b/qwen3-vl-8b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 14278857,
+  "episodes": 5388,
+  "sha256": "3ce89133f777eed34ecf33ff66b82a26fff71bf0f9bc2e324e1734be257384ed"
+ },
+ "qwen3.5-0.8b/qwen3.5-0.8b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 23233585,
+  "episodes": 5388,
+  "sha256": "ee2d769a34b1b3677983413ce08fbf68f4f88371101905eb8d0c354c0e952f78"
+ },
+ "qwen3.5-0.8b/qwen3.5-0.8b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 5884353,
+  "episodes": 1347,
+  "sha256": "357a919b6fb150e4fedf890a15e8a58708a6cc518e28c46394370f5d5e948996"
+ },
+ "qwen3.5-0.8b/qwen3.5-0.8b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3400147,
+  "episodes": 400,
+  "sha256": "2dccbeec91cdf974a972748669d4e0bffc705b1f58f41a1684c066aca455e283"
+ },
+ "qwen3.5-0.8b/qwen3.5-0.8b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 21745117,
+  "episodes": 5388,
+  "sha256": "3bee0b4426ef8d2722ab945181ed6ce171e435861deccb62c8da8f6651008a95"
+ },
+ "qwen3.5-0.8b-wsp/qwen3.5-0.8b-wsp-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 23717574,
+  "episodes": 5388,
+  "sha256": "573c9a7a47c486f27bc98865a8de8ac2bc62d448a8e60005286e834fb4a73587"
+ },
+ "qwen3.5-0.8b-wsp/qwen3.5-0.8b-wsp-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 6113993,
+  "episodes": 1347,
+  "sha256": "140ac26b79dad3799217ee878cd92f6f4b03e39df0176c0369ecd815fb53fceb"
+ },
+ "qwen3.5-0.8b-wsp/qwen3.5-0.8b-wsp-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3820054,
+  "episodes": 400,
+  "sha256": "89c71b238e3d7e3367e3b4bb693d27444f34b32d53bb1af2e730f46dcbafb9dc"
+ },
+ "qwen3.5-0.8b-wsp/qwen3.5-0.8b-wsp.jsonl": {
+  "stage": "stage 1",
+  "bytes": 21735639,
+  "episodes": 5388,
+  "sha256": "58ca6c5bfc0c9f596f129e1ca650911faf5b742ffd595a931565c23811a2886b"
+ },
+ "qwen3.5-2b/qwen3.5-2b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 20243758,
+  "episodes": 5388,
+  "sha256": "86708f8cc77a75d07d9ee5982a612142e81b563bf88ba9f880163a5ba9e09dad"
+ },
+ "qwen3.5-2b/qwen3.5-2b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 4873128,
+  "episodes": 1347,
+  "sha256": "1f1a504b5852321f9a0a4e7b3e43bf2ca8b7343a764a5603a6f6edc68ebacbe3"
+ },
+ "qwen3.5-2b/qwen3.5-2b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3652412,
+  "episodes": 400,
+  "sha256": "62bc06b8786a3a149bc7748f3e6131e0028ffda6ff18abcaa465f29e35cf2a5b"
+ },
+ "qwen3.5-2b/qwen3.5-2b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 13218482,
+  "episodes": 1547,
+  "sha256": "f31e9a2ece2d608517d17d5996be4721b2e785e8c2adb3bf69cb06c1022ea6d8"
+ },
+ "qwen3.5-2b/qwen3.5-2b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 21002628,
+  "episodes": 5387,
+  "sha256": "6175bd1e85974428d00aa3f11af5e6b8174407cae59f6c30a10290f273c0b069"
+ },
+ "qwen3.5-4b/qwen3.5-4b-cp9.jsonl": {
+  "stage": "stage 4 \u00b7 planner Qwen3.5-9B",
+  "bytes": 12477999,
+  "episodes": 650,
+  "sha256": "d5f1ab5b585b02fbcdd0c8132b5691e16ba1fc9f08cfb471a1a42107ffc8fa9f"
+ },
+ "qwen3.5-4b/qwen3.5-4b-cpsolo.jsonl": {
+  "stage": "stage 4 solo",
+  "bytes": 3891202,
+  "episodes": 400,
+  "sha256": "3af0bbc772da0c72dffeba57ead6224c6617daca1d67382c0db3ae2dedd65e87"
+ },
+ "qwen3.5-4b/qwen3.5-4b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 16107350,
+  "episodes": 5388,
+  "sha256": "19a3850b7df90dfe16d19380b6f78ad5249401297750028d87179fa3d41e0102"
+ },
+ "qwen3.5-4b/qwen3.5-4b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 4071909,
+  "episodes": 1347,
+  "sha256": "c6ecc5a806913df46b05d9bf64ee5bc4441fb8f88bbcab14dd15382ca9c84f6d"
+ },
+ "qwen3.5-4b/qwen3.5-4b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3627598,
+  "episodes": 400,
+  "sha256": "b3dbcc7aaeb943964fdc41846dac8d4fe1d2337e0c03c5d0b80b9eee576ae7ee"
+ },
+ "qwen3.5-4b/qwen3.5-4b-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 32087610,
+  "episodes": 4641,
+  "sha256": "d7085e9c1b8d5404ebec8db21fe1ae1acb011b76addaabf41d4a0ebf0d7cac62"
+ },
+ "qwen3.5-4b/qwen3.5-4b-pdg.jsonl": {
+  "stage": "stage 3 \u00b7 planner Gemma-4-26B",
+  "bytes": 11764324,
+  "episodes": 1547,
+  "sha256": "571d76d701d0c9f260b395adbc24396dcf3f314e71dcb728d96bb865920da0f6"
+ },
+ "qwen3.5-4b/qwen3.5-4b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 15808400,
+  "episodes": 5388,
+  "sha256": "46d58a5a95d7b1b5bbae6f7af448458fcb7620da3ed19788fbcebe0d705a76dd"
+ },
+ "qwen3.5-9b/qwen3.5-9b-cpsolo.jsonl": {
+  "stage": "stage 4 solo",
+  "bytes": 4032252,
+  "episodes": 400,
+  "sha256": "17c1ee3c59f643f7cf5bee947c2aca16c1cb9cc3fcd026b1666ff3f93151eb54"
+ },
+ "qwen3.5-9b/qwen3.5-9b-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 15763640,
+  "episodes": 5388,
+  "sha256": "b6cadeb2b17dcc738cb47872924a815e759f2d0229aea1494a60a40993d79fc1"
+ },
+ "qwen3.5-9b/qwen3.5-9b-memory.jsonl": {
+  "stage": "stage 1 memory",
+  "bytes": 4101820,
+  "episodes": 1347,
+  "sha256": "a0afbbe26c1b36a0b06f5a2ea806a8a1259a3e2b936e7e6c3598e591cc9251e8"
+ },
+ "qwen3.5-9b/qwen3.5-9b-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3741566,
+  "episodes": 400,
+  "sha256": "971782a277961acdad73606f5e53e8ebc1c7da6be3051560869708d4effb9ebd"
+ },
+ "qwen3.5-9b/qwen3.5-9b.jsonl": {
+  "stage": "stage 1",
+  "bytes": 14949410,
+  "episodes": 5388,
+  "sha256": "89faabd7209fc7413eb8f790ef0b67fa27b3e9d9175b779174db64828bfad64d"
+ },
+ "qwen3.8/qwen3.8-hr.jsonl": {
+  "stage": "stage 2",
+  "bytes": 11269360,
+  "episodes": 4041,
+  "sha256": "2b8ad8ed76ef16d27ee3817bc1ada39ce7158bcc3620e45d5c4a6fd32da5054f"
+ },
+ "qwen3.8/qwen3.8-mt.jsonl": {
+  "stage": "multi-turn solo",
+  "bytes": 3964632,
+  "episodes": 400,
+  "sha256": "4653a0d17da19af60a964173fb95d6228f320173306d45237a4cd9b8023532f2"
+ },
+ "qwen3.8/qwen3.8-pd.jsonl": {
+  "stage": "stage 3 \u00b7 planner qwen3.8",
+  "bytes": 10725930,
+  "episodes": 1547,
+  "sha256": "94d07df1dbe8257810a3ad3ce0f0a7df1c6b0febe142bddf12842d7e77c9e071"
+ },
+ "qwen3.8/qwen3.8.jsonl": {
+  "stage": "stage 1",
+  "bytes": 15881592,
+  "episodes": 5388,
+  "sha256": "d564bf4d90f7965510820ac68037543059414fad8a9a347d05229e28910241b1"
+ }
+}

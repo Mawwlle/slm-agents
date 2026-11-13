@@ -1,0 +1,31 @@
+15fb075	2026-11-12T11:38:35+03:00	Stage 4 results: CP2, CP3 hold; CP1 fails; CP4 voided by calibration (14% false PASS); CP5 not evaluable
+13b0aa4	2026-11-12T11:37:23+03:00	PREREG-CP log: CP3 calibration is moot for non-inferiority; CP5 not evaluable at B's cost (both reported as such)
+06e8390	2026-11-12T11:36:17+03:00	CP4: drop R(4B;4B), which needs a run the pre-registration never listed (logged)
+f8106bc	2026-11-11T18:34:34+03:00	PREREG log + results: A3 rerun with fit-chosen cascade thresholds (holds, unchanged)
+4e63bcf	2026-11-11T18:31:58+03:00	PREREG-HR log + results: HR3 rerun with calibrated cascade statistics (false PASS 2%, HR3 holds)
+23578b4	2026-11-11T16:55:48+03:00	PREREG-CP: frozen before any stage-4 episode
+c03c4d6	2026-11-11T16:35:17+03:00	PREREG-CP: draft (not frozen)
+44aeda4	2026-11-10T19:39:43+03:00	PREREG-PD log: FunctionGemma-270M dropped by the user's decision
+5526fd9	2026-11-10T19:09:15+03:00	PREREG-PD log: context overflow is kept as a failure in stage 3, unlike the stage 1-2 loader
+49e5781	2026-11-10T18:12:49+03:00	PREREG-PD log: correct what a parser version for FunctionGemma implies
+6199700	2026-11-10T18:12:35+03:00	PREREG-PD log: gateway access, Gemma planner format, context overflow, pending runs
+e748114	2026-11-09T18:30:33+03:00	Parser: non-JSON literal values become strings instead of crashing the episode
+8f6fbf4	2026-11-09T18:22:01+03:00	PREREG-PD log: correct the timestamp of the implementation entry
+b533316	2026-11-09T18:06:24+03:00	Stage 3: BFCL multi-turn track and plan & delegate harness
+d568f58	2026-11-09T17:54:17+03:00	Freeze PREREG-PD (stage 3: plan & delegate)
+2d320a5	2026-11-09T17:21:14+03:00	Parser v5: LFM2.5 native tool calls; rerun phase L LFM under v5
+e08df3f	2026-11-09T13:10:02+03:00	Phase L driver and launcher; active parameter counts from the model cards
+bb428cf	2026-11-09T13:00:10+03:00	Phase L pre-registration (new small models as an out-of-sample check); ship weights through this machine
+222d35a	2026-11-09T12:39:55+03:00	HR5: three-rule router vs full search (not shown), page card; probe tool; serve without Xet
+c006d8d	2026-11-09T12:37:55+03:00	HR5 pre-registered: three-rule router against the full pair search
+07d38c8	2026-11-09T11:57:55+03:00	Stage 2 results: HR1–HR4, failed HR3 calibration logged, stage-1 prose corrected; harness routing page
+16ccec7	2026-11-09T02:59:06+03:00	Stage 1 closed: memory wave in, final narrative and reports; HR calibration (HR2 shuffles, HR3 swap)
+e8b2eaf	2026-11-09T01:48:12+03:00	Phase H: strict grammar opens on bare JSON too, EOS stop strings; HR analysis; follow-up launcher
+529c443	2026-11-09T01:26:58+03:00	Stage 2 pre-registration (harness routing); skill_inline, strict and combined conditions; wave launcher
+a62a109	2026-11-09T00:45:19+03:00	Analysis: fair A1 baseline, within-model AUC, offline A3 cascades with retry control and CIs; report sections
+90c62fe	2026-11-09T00:30:17+03:00	Phase M done on v4; memory wave; set-literal fix
+4b7a81d	2026-11-08T19:01:46+03:00	Parser v4: unambiguous recovery, parser version per episode; full rerun of phase M
+dc84358	2026-11-08T18:07:56+03:00	Parse bare JSON tool calls (Granite 4, MNN-Pocket)
+bd00342	2026-11-08T17:55:59+03:00	Tolerant Gemma call parsing; hotfix via base64; report generator
+7538fb0	2026-11-08T17:45:23+03:00	Parse Qwen3.5 and Gemma 4 native tool calls; hotfix tool; prereg change log
+0b5d3b0	2026-11-08T17:05:23+03:00	Harness, tasks, skills and pre-registration

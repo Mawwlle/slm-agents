@@ -1,0 +1,33 @@
+% shared by main.tex (arXiv) and aee.tex (the anonymous submission); acmart hides the author under `anonymous`
+\input{numbers}
+\input{tables}
+\usepackage{booktabs}
+\newcommand{\pp}{\,pp}
+\setlength{\emergencystretch}{2em}  % let a line with a long \texttt name stretch rather than overflow
+\settopmatter{printacmref=false}
+\setcopyright{none}
+
+\title{When Does a Small Model Pay?}
+\subtitle{A Pre-Registered Study of Escalation, Harness Routing and Delegation for Agentic Small Language Models}
+
+\author{Maxim Dunaev}
+\orcid{0009-0009-2988-9839}
+\affiliation{\institution{IDM Lab}\country{}}
+
+\begin{abstract}
+A recent position paper argues that small language models (SLMs) should be the default in agentic systems, with large
+models called only when needed, but it reports no experiment. We test the claim on four agentic tracks with
+\nModels{} open models from 0.23B to 27B active parameters and \nEpisodes{} logged episodes, in four stages that were
+each pre-registered before their first episode. Every decision rule was also run on label-shuffled data, and a rule
+that passed more than 5\% of shuffled copies did not count. Of \nHypotheses{} pre-registered hypotheses, \nHolds{} hold, and
+all \nHolm{} survive a Holm correction across the study. Small models are cheap substitutes: a 4B model solves
+\replFourMT{} of the multi-turn tasks a 27B model solves at a \costFour{}$\times$ lower cost per task, and replaceability
+falls off below about 1.5B active parameters. Fixes in the harness are model-specific: of two findings from twelve
+models, the one about instructions replicated on seven new models and the one about worked examples did not.
+Delegation turns tiny models into useful executors (a 350M model goes from \tinyAloneMT{} to \tinyPlanMT{} of multi-turn
+tasks with a 27B planner), but the planner is \plannerShareLo{} or more of the compute and the scheme does not pay.
+Prompted small planners do not hold the role: a 2.6B planner breaks the protocol in \protoLfm{} of its turns, and a
+tiny planner--executor stack solves \tinyStackQ{} of 650 tasks. A cheap 9B plan lifts a weak executor by \liftTiny\pp{}
+but costs a strong one \hurtFour\pp{}; a router that plans only after the model fails alone beats planning always by
+\routerVsPlan\pp{} at \routerCost{} of the cost, while its gain over the best single model did not survive calibration.
+\end{abstract}

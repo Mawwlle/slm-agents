@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>When Does a Small Model Pay?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A pre-registered study of escalation, harness routing and delegation for agentic small language models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Preprint · November 2026</p>
+    <h1>When Does a Small Model Pay?</h1>
+    <p class="subtitle">A pre-registered study of escalation, harness routing and delegation for agentic small language models</p>
+    <p class="byline">
+      <a href="https://orcid.org/0009-0009-2988-9839">Maxim Dunaev</a>
+      <span class="sep">·</span> IDM Lab
+    </p>
+    <nav class="links" aria-label="Paper links">
+      <a class="button primary" href="paper.pdf">Paper (PDF)</a>
+      <span class="button" aria-disabled="true">arXiv <small>soon</small></span>
+      <a class="button" href="https://github.com/Mawwlle/slm-agents">Code</a>
+      <span class="button" aria-disabled="true">Data <small>soon</small></span>
+      <a class="button" href="#citation">BibTeX</a>
+    </nav>
+    <dl class="facts">
+      <div><dt>open models, 0.23B to 27B</dt><dd data-n="nModels">19</dd></div>
+      <div><dt>logged agentic episodes</dt><dd data-n="nEpisodes">221,493</dd></div>
+      <div><dt>pre-registered hypotheses hold</dt><dd><span data-n="nHolds">6</span> <span class="of">of <span data-n="nHypotheses">23</span></span></dd></div>
+    </dl>
+  </div>
+  <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#setup">What we tested</a></li>
+      <li><a href="#replace">Small models replace large ones</a></li>
+      <li><a href="#harness">The harness is part of the model</a></li>
+      <li><a href="#delegate">Delegation levels executors</a></li>
+      <li><a href="#cheap">Cheap planners and a router</a></li>
+      <li><a href="#calibration">Calibration</a></li>
+      <li><a href="#hypotheses">All hypotheses</a></li>
+      <li><a href="#citation">Code, data, citation</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>A recent position paper argues that agentic systems should run on small language models by default and call
+        large models only when needed. It reports no experiment. We test the claim on four agentic tracks with
+        <span data-n="nModels">19</span> open models and <span data-n="nEpisodes">221,493</span> logged episodes, in
+        four stages, each pre-registered before its first episode. Every decision rule was also run on label-shuffled
+        data, and a rule that passed more than 5% of shuffled copies did not count.</p>
+      <ul class="findings">
+        <li><strong>A 4B model is a cheap substitute.</strong> Qwen3.5-4B solves <span data-n="replFourMT">66%</span>
+          of the multi-turn tasks a 27B model solves, at a <span data-n="costFour">7.4</span>× lower cost per task.
+          Below about 1.5B active parameters this falls apart.</li>
+        <li><strong>Harness fixes are model-specific.</strong> Of two findings from twelve models, the one about
+          instructions replicated on seven new models; the one about worked examples did not.</li>
+        <li><strong>A large planner levels small executors, and costs nearly everything.</strong> A 350M model goes
+          from <span data-n="tinyAloneMT">0%</span> to <span data-n="tinyPlanMT">43%</span> of multi-turn tasks, but the
+          planner is <span data-n="plannerShareLo">96%</span> or more of the compute.</li>
+        <li><strong>Prompted small planners don't hold the role.</strong> A 2.6B planner breaks the protocol in
+          <span data-n="protoLfm">91%</span> of its turns. A router that plans only after a failure beats planning
+          always, but a gain over the best single model is not shown.</li>
+      </ul>
+    </section>
+
+    <section id="setup">
+      <h2>What we tested</h2>
+      <p>Three ways to make a small model pay in an agentic loop, each on the same tasks, models and harness.</p>
+      <div class="levers">
+        <article class="lever">
+          <h3>Escalation</h3>
+          <p class="flow"><span class="node">small model</span><span class="arrow">fails →</span><span class="node big">large model</span></p>
+          <p>A detector watches the first steps of a small model's episode and hands a likely failure to a large model.</p>
+        </article>
+        <article class="lever">
+          <h3>Harness routing</h3>
+          <p class="flow"><span class="node">model</span><span class="arrow">+</span><span class="node">its scaffold</span></p>
+          <p>Each model gets the scaffold that suits it: worked examples, instructions, a watchdog, constrained decoding.</p>
+        </article>
+        <article class="lever">
+          <h3>Delegation</h3>
+          <p class="flow"><span class="node big">planner</span><span class="arrow">step ⇄ report</span><span class="node">executor</span></p>
+          <p>A planner writes one step at a time and sees each result; a small executor turns the step into tool calls.</p>
+        </article>
+      </div>
+      <dl class="tracks">
+        <div><dt>Code</dt><dd>MBPP, 497 tasks, graded by the reference tests</dd></div>
+        <div><dt>Tools</dt><dd>BFCL v3 single-turn, 800 tasks</dd></div>
+        <div><dt>Shell</dt><dd>50 multi-step tasks with <code>bash</code> and <code>write_file</code></dd></div>
+        <div><dt>Multi-turn</dt><dd>BFCL v4 on stateful simulators, 200 tasks; stage 4 adds 400 more</dd></div>
+      </dl>
+      <p>Cost is counted in FLOPs, summed over every call of an episode, planner and executor alike:</p>
+      <p class="formula" role="math" aria-label="FLOPs equals 2 times N active times prompt plus completion tokens">
+        FLOPs = 2 · <i>N</i><sub>active</sub> · (<i>t</i><sub>prompt</sub> + <i>t</i><sub>completion</sub>)
+      </p>
+      <p>Quality is the pass rate, averaged over tracks. Differences are paired by task, with a 95% bootstrap interval and
+        a permutation <i>p</i>. Any choice a rule makes, a threshold, a harness or a router, is made on fit tasks and scored
+        on held-out ones.</p>
+    </section>
+
+    <section id="replace">
+      <h2>Small models replace large ones, up to a point</h2>
+      <p>For each model, the share of the test tasks solved by the 27B model (qwen3.8) that the model also solves alone.
+        What matters is active parameters: Qwen3-VL-30B, a mixture of experts with 3B active, sits with the 3–4B models,
+        at a <span data-n="costVlThirty">9.9</span>× lower cost.</p>
+      <figure class="chart">
+        <div class="controls" role="group" aria-label="Track">
+          <button type="button" data-track="multiturn" aria-pressed="true">Multi-turn</button>
+          <button type="button" data-track="shell" aria-pressed="false">Shell</button>
+          <button type="button" data-track="code" aria-pressed="false">Code</button>
+          <button type="button" data-track="tools" aria-pressed="false">Tools</button>
+        </div>
+        <div class="plot" id="chart-replace"></div>
+        <figcaption><b>Figure 1.</b> Replaceability against active parameters, log scale. Hover a point for the model and
+          its cost per task relative to the 27B model. On single-call tool use even tiny models keep up; on the agentic
+          tracks they do not.</figcaption>
+      </figure>
+    </section>
+
+    <section id="harness">
+      <h2>The harness is part of the model</h2>
+      <div class="pair">
+        <div class="stat">
+          <p class="stat-label">Gemma-4-26B, same <span data-n="gemmaN">64</span> tasks</p>
+          <p class="stat-value"><span data-n="gemmaOld">15%</span> <span class="to">→</span> <span data-n="gemmaNew">88%</span></p>
+          <p class="stat-note">only the parser changed: the old one did not read its <code>call:name{…}</code> format</p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">Retry with its own harness vs a plain retry</p>
+          <p class="stat-value"><span data-n="switchLo">+1.4</span> to <span data-n="switchHi">+2.1</span> pp</p>
+          <p class="stat-note">Qwen3.5-4B, at all six budgets; passes <span data-n="switchFalse">2%</span> of shuffled copies</p>
+        </div>
+      </div>
+      <p>Any comparison of small models is first a comparison of the parsers that read them. Once a model's call shape
+        is read, a more lenient parser mostly changes the count of broken steps, not the pass rate.</p>
+      <p>Stage 2 found two patterns on twelve models. Phase L tested both on seven models that had not been used to find them:</p>
+      <ul class="replication">
+        <li><span class="pill holds">replicated</span> Instructions do not help small models. The new small models' mean
+          lift is <span data-n="instrNew">−1.1</span> pp, against <span data-n="instrGateway">+6.0</span> pp for the three
+          large ones.</li>
+        <li><span class="pill">not replicated</span> Worked examples help small models. They helped
+          <span data-n="memoryHelps">2</span> of the 7, against the pre-registered 5.</li>
+      </ul>
+    </section>
+
+    <section id="delegate">
+      <h2>Delegation levels executors, at a price</h2>
+      <p>qwen3.8 plans with thinking off: it sees the task, the tools and a report of every step, and writes one step at
+        a time. The executor sees only that step and the tools it names. From 1.5B active parameters up, every executor
+        reaches <span data-n="levelLo">55</span>–<span data-n="levelHi">59%</span> of multi-turn tasks, whatever it
+        solves alone. The plan is a ceiling as well as a floor.</p>
+      <figure class="chart">
+        <div class="controls" role="group" aria-label="Track">
+          <button type="button" data-track="multiturn" aria-pressed="true">Multi-turn</button>
+          <button type="button" data-track="shell" aria-pressed="false">Shell</button>
+        </div>
+        <div class="plot" id="chart-level"></div>
+        <figcaption><b>Figure 2.</b> Test tasks solved by each executor alone and under qwen3.8's plan. The dashed line
+          is qwen3.8 executing its own plan.</figcaption>
+      </figure>
+      <p>Feedback is what makes it work. Against a planner that writes the whole plan at once and never sees results,
+        seeing each report adds <span data-n="feedbackSmall">+40.2</span> pp for LFM2.5-1.2B and
+        <span data-n="feedbackFour">+57.7</span> pp for Qwen3.5-4B. But the planner is <span data-n="plannerShareLo">96%</span> or more of the compute of every
+        delegated episode, so at that cost a single mid-sized model solves as much or more.</p>
+    </section>
+
+    <section id="cheap">
+      <h2>Cheap planners and a router</h2>
+      <p>Stage 4 asks whether delegation pays with a cheaper planner, on 650 multi-turn and shell tasks. A prompted small
+        planner first has to stay a planner: write a valid step, not call the tools itself.</p>
+      <figure class="chart">
+        <div class="plot" id="chart-protocol"></div>
+        <figcaption><b>Figure 3.</b> Planner turns that are not a valid step or finish, by the planner's size. The tiny
+          stack, LFM2.5-2.6B planning for LFM2.5-350M, solves <span data-n="tinyStackQ">0%</span> of the tasks.</figcaption>
+      </figure>
+      <p>A cheap 9B plan lifts the 350M executor by <span data-n="liftTiny">+20.4</span> pp but costs Qwen3.5-4B
+        <span data-n="hurtFour">−15.9</span> pp, at <span data-n="planCostFour">2.5</span>× its cost. A router fixes the
+        second half: it keeps the strong model alone and plans only where it is likely to fail. Drag the threshold.</p>
+      <figure class="chart">
+        <div class="controls" role="group" aria-label="Systems shown">
+          <label class="check"><input type="checkbox" id="show-single" checked> <span class="key s1">●</span> one model</label>
+          <label class="check"><input type="checkbox" id="show-plan" checked> <span class="key s2">■</span> always planned</label>
+          <label class="check"><input type="checkbox" id="show-router" checked> <span class="key s3">▲</span> router R(4B; 9B)</label>
+        </div>
+        <div class="plot" id="chart-frontier"></div>
+        <div class="slider">
+          <label for="tau">Router threshold: drag right to plan on more tasks</label>
+          <input type="range" id="tau" min="0" max="1" step="1" value="0">
+          <output id="tau-out" for="tau"></output>
+        </div>
+        <figcaption><b>Figure 4.</b> Cost per episode against quality. The router runs Qwen3.5-4B alone and, where a
+          detector fitted on other folds flags the episode, replays the task with Qwen3.5-9B planning. The pre-registered
+          comparison picks its threshold on fit folds: it beats always planning by
+          <span data-n="routerVsPlan">+17.8</span> pp at <span data-n="routerCost">59%</span> of the cost (CP3).</figcaption>
+      </figure>
+      <p>Against the best single model at the same cost, the best router budget gains
+        <span data-n="routerVsSingle">+3.1</span> pp, but the rule that may pick that budget out of 16 passed
+        <span data-n="cpFourFalse">14%</span> of shuffled copies, so the gain is not shown. Prompted small planners do
+        not pay; the systems where small planners work fine-tune them.</p>
+    </section>
+
+    <section id="calibration">
+      <h2>Calibration</h2>
+      <p>A bootstrap interval protects one comparison. A rule that picks the best of many thresholds, harnesses or
+        budgets, and then tests it, can pass on noise. So we ran every superiority rule on 50 copies of the data in
+        which, per task, the labels of the compared systems are swapped at random. When the rule passes more than 5% of
+        those copies, the verdict does not count.</p>
+      <div class="pair">
+        <div class="stat">
+          <p class="stat-label">HR3 · retry with another harness</p>
+          <p class="stat-value">48% <span class="to">→</span> <span data-n="switchFalse">2%</span></p>
+          <p class="stat-note">thresholds had been chosen on test tasks; fixed, logged, and the verdict still holds</p>
+        </div>
+        <div class="stat">
+          <p class="stat-label">CP4 · router beats the best single model</p>
+          <p class="stat-value"><span data-n="cpFourFalse">14%</span></p>
+          <p class="stat-note">best of 16 budgets passes on noise too often; not shown</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hypotheses">
+      <h2>All pre-registered hypotheses</h2>
+      <p><span data-n="nHolds">6</span> of <span data-n="nHypotheses">23</span> hold, and all survive a Holm correction
+        across the study. Every rule, and every change after a freeze with its date and reason, is in the released
+        pre-registrations.</p>
+      <div class="controls" role="group" aria-label="Filter hypotheses">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="holds" aria-pressed="false">Holds</button>
+        <button type="button" data-filter="not" aria-pressed="false">Not shown</button>
+      </div>
+      <div class="table-wrap">
+        <table class="verdicts">
+          <thead><tr><th scope="col">ID</th><th scope="col">Claim</th><th scope="col">Verdict</th><th scope="col" class="num"><i>p</i></th></tr></thead>
+          <tbody id="verdicts"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="citation">
+      <h2>Code, data, citation</h2>
+      <ul class="release">
+        <li><b>Code.</b> The harness, the five pre-registrations with their logs, and one short script per claim; every
+          number in the paper is generated by them.</li>
+        <li><b>Data.</b> Every episode as JSONL, with prompts, tool calls and outcomes.</li>
+      </ul>
+      <div class="bibtex">
+        <button type="button" id="copy">Copy</button>
+        <pre id="bib">@misc{dunaev2026smallmodel,
+  title  = {When Does a Small Model Pay? A Pre-Registered Study of Escalation,
+            Harness Routing and Delegation for Agentic Small Language Models},
+  author = {Dunaev, Maxim},
+  year   = {2026},
+  note   = {Preprint}
+}</pre>
+      </div>
+      <p class="disclosure">The author used an AI assistant (Claude) to write experiment and analysis code, to run
+        experiments and to draft the text. Every number is generated from the released logs by the released scripts.</p>
+    </section>
+  </main>
+</div>
+
+<div class="tooltip" id="tooltip" role="status" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

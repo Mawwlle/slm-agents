@@ -1,0 +1,117 @@
+{
+ "A1":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "A2":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "A3":{
+  "verdict":"HOLDS",
+  "p":0.0004997501,
+  "holm_survives":true
+ },
+ "A4":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "A5":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "HR1":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "HR2":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "HR3":{
+  "verdict":"HOLDS",
+  "p":0.0004997501,
+  "holm_survives":true
+ },
+ "HR4":{
+  "verdict":"HOLDS",
+  "p":0.00029997,
+  "holm_survives":true
+ },
+ "HR5":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "L1":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "L2":{
+  "verdict":"HOLDS",
+  "p":0.0001,
+  "holm_survives":true
+ },
+ "L3":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "PD3":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "PD1":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "PD2":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "PD4":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "PD5":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "CP1":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "CP2":{
+  "verdict":"HOLDS",
+  "p":0.0004997501,
+  "holm_survives":true
+ },
+ "CP3":{
+  "verdict":"HOLDS",
+  "p":0.0004997501,
+  "holm_survives":true
+ },
+ "CP4":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ },
+ "CP5":{
+  "verdict":"NOT SHOWN",
+  "p":1.0,
+  "holm_survives":false
+ }
+}

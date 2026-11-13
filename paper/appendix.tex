@@ -1,0 +1,36 @@
+\section{All pre-registered verdicts}\label{app:verdicts}
+
+Table~\ref{tab:verdicts} lists the \nHypotheses{} hypotheses of the five pre-registrations, each with its pre-registered
+verdict. A superiority verdict counts only if its rule passes at most 5\% of label-shuffled copies; this removed
+CP4. For the hypotheses that hold, $p$ is that of the rule's primary contrast (for a rule that needs $k$ passing
+budgets, the $k$-th smallest); all \nHolm{} survive Holm's correction~\cite{holm1979} over all \nHypotheses. The full
+rules, and every change after a freeze with its date and reason, are in the released \texttt{prereg/} folder.
+
+\begin{table*}
+  \caption{The pre-registered hypotheses and their verdicts.}\label{tab:verdicts}
+  \small\verdictTable
+\end{table*}
+
+\section{Parser sensitivity}\label{app:parser}
+
+Runs set aside when the parser changed, compared with the final run on the same \texttt{base} tasks
+(Table~\ref{tab:parser}). Quality is the macro pass rate over tracks; $\Delta$ is final minus old.
+
+\begin{table*}
+  \caption{Old-parser runs against the final parser on the same tasks.}\label{tab:parser}
+  \small\parserTable
+\end{table*}
+
+\section{Calibration}\label{app:calibration}
+
+For each superiority rule we built 50 copies of the data in which, per task, the labels of the compared systems are
+exchanged at random, and reran the whole selection and test. A rule that passes more than 5\% of the copies is
+treated as not shown. Two problems were found this way and are dated in the pre-registration logs. In stage 2, the
+switch-versus-retry cascade (HR3) passed 48\% of copies: each policy's detector threshold was chosen on the test
+tasks it was scored on, and the two policies were compared at their own best thresholds, so they escalated
+different shares of tasks to the large model and that difference, not the retry, decided the test. With thresholds
+chosen on fit data and both policies at the retry's threshold, the rule passes \switchFalse{} of copies and still
+holds. In stage 4, the rule ``the router beats the best single model at any of 16 budgets'' passed \cpFourFalse{} of
+copies, so CP4 is not shown although its best budget gains \routerVsSingle\pp. CP3 is a non-inferiority claim, which
+equal systems satisfy, so the shuffle does not test it. CP5 could not be evaluated: the tiny stack is cheap because
+its episodes end early, and no router fits its cost.
